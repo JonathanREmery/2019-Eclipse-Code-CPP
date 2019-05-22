@@ -24,7 +24,7 @@ void Drivetrain::ArcadeDrive(){
 void Drivetrain::RunOpenLoop(){
     // Tells the drivetrain how fast and in what way to drive
     speed = 100.0f;
-    ArcadeDrive();
+    TankDrive();
 }
 
 void Drivetrain::Drive(int direction){
