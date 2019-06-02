@@ -7,7 +7,7 @@ bool alreadyChanged = false;
 void Intake::RunOpenLoop() {
     if (eclipse.controller.getPOV() == eclipse.controls.down){
         // If down on the DPAD is pressed intake
-        intake_motor.Set(ControlMode::PercentOutput, mode ? 0.75f : -0.75f);
+        intake_motor.Set(ControlMode::PercentOutput, mode ? 0.5f : -0.5f);
     } else if (eclipse.controller.getPOV() == eclipse.controls.up){
         // If up on the DPAD is pressed outake
         intake_motor.Set(ControlMode::PercentOutput, mode ? -0.5f : 0.5f);

@@ -1,0 +1,16 @@
+[
+  {
+    "artifact": "frcCpp (in project 2019_AUTON_TEST)",
+    "target": "roborio",
+    "component": "frcUserProgram",
+    "debugfile": "frcCpp_roborio.debugconfig",
+    "language": "cpp"
+  },
+  {
+    "artifact": "frcCpp (in project 2019_ECLIPSE_C++)",
+    "target": "roborio",
+    "component": "frcUserProgram",
+    "debugfile": "frcCpp_roborio.debugconfig",
+    "language": "cpp"
+  }
+]

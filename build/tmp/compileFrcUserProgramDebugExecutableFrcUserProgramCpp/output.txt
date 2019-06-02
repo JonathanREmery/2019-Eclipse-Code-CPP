@@ -1,0 +1,16 @@
+See file:///C:/Users/Jonathan/Desktop/FRC_2019_ECLIPSE_C++/2019_ECLIPSE_C++/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling Elevator.cpp successful.
+
+compiling Intake.cpp successful.
+
+compiling Climber.cpp successful.
+
+compiling Pivot.cpp successful.
+
+compiling Auton.cpp successful.
+
+compiling Drivetrain.cpp successful.
+
+compiling Robot.cpp successful.
+
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/Jonathan/Desktop/FRC_2019_ECLIPSE_C++/2019_ECLIPSE_C++/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
