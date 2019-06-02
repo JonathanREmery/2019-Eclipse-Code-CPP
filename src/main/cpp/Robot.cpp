@@ -24,6 +24,8 @@ void Robot::AutonomousInit() {
 void Robot::AutonomousPeriodic() {
   if (m_autoSelected == kAutoNameCustom) {
   } else {
+    // Runs the autonomous code
+    eclipse.auton.printValues();
   }
 }
 

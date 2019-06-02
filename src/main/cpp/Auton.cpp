@@ -1,16 +1,10 @@
 #include "Auton.h"
 
-frc::Ultrasonic frontSensor(1, 1);
-frc::Ultrasonic backSensor(2, 2);
-frc::Ultrasonic leftSensor(3, 3);
-frc::Ultrasonic rightSensor(4, 4);
+std::shared_ptr<NetworkTable> limelight = nt::NetworkTableInstance::GetDefault().GetTable("limelight");
 
-Auton::LidarData Auton::getLidarData(){
-    // Returns information from four ultrasonic sensors for use in autonomous
-    Auton::LidarData data;
-    data.front = frontSensor.GetRangeInches();
-    data.back = backSensor.GetRangeInches();
-    data.left = leftSensor.GetRangeInches();
-    data.right = rightSensor.GetRangeInches();
-    return data;    
+void Auton::printValues(){
+    // Print values from limelight
+    std::cout << "tx: " << limelight->GetNumber("tx", 0.0) << std::endl;
+    std::cout << "ty: " << limelight->GetNumber("ty", 0.0) << std::endl;
+    std::cout << "ta: " << limelight->GetNumber("ta", 0.0) << std::endl;
 }

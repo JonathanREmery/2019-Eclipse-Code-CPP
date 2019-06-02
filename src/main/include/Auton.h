@@ -2,21 +2,19 @@
 
 #include <iostream>
 #include <string>
-#include <frc/Ultrasonic.h>
+
+#include "frc/smartdashboard/Smartdashboard.h"
+#include "networktables/NetworkTable.h"
+#include "networktables/NetworkTableInstance.h"
 
 class Auton{
 
     public:
 
         Auton(){}
-
-        struct LidarData{
-            double front,
-            back,
-            left,
-            right;
-        };
-
-        LidarData getLidarData();
+        
+        void printValues();
 
 };
+
+#include "Supersystem.h"

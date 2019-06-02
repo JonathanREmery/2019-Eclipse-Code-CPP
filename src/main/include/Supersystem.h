@@ -9,6 +9,7 @@
 #include "Intake.h"
 #include "Elevator.h"
 #include "Controls.h"
+#include "Auton.h"
 
 class Supersystem {
     
@@ -23,6 +24,7 @@ class Supersystem {
         Pivot pivot = *new Pivot();
         Intake intake = *new Intake();
         Elevator elevator = *new Elevator();
+        Auton auton = *new Auton();
 
 };
 
