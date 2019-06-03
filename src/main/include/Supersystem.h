@@ -15,17 +15,17 @@ class Supersystem {
     
     public:
         Supersystem(){}
-        Controls controls = *new Controls();
-        Controls::LeftJoystick leftJoystick = *new Controls::LeftJoystick();
-        Controls::RightJoystick rightJoystick = *new Controls::RightJoystick();
-        Controls::Controller controller = *new Controls::Controller();
-        Drivetrain drivetrain = *new Drivetrain();
-        Climber climber = *new Climber();
-        Pivot pivot = *new Pivot();
-        Intake intake = *new Intake();
-        Elevator elevator = *new Elevator();
-        Auton auton = *new Auton();
+        Controls controls;
+        Controls::LeftJoystick leftJoystick;
+        Controls::RightJoystick rightJoystick;
+        Controls::Controller controller;
+        Drivetrain drivetrain;
+        Climber climber;
+        Pivot pivot;
+        Intake intake;
+        Elevator elevator;
+        Auton auton;
 
 };
 
-static Supersystem eclipse = *new Supersystem();
+static Supersystem eclipse;
