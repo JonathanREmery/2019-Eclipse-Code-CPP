@@ -1,10 +1,8 @@
 #include "Auton.h"
 
-std::shared_ptr<NetworkTable> limelight = nt::NetworkTableInstance::GetDefault().GetTable("limelight");
-
 void Auton::printValues(){
-    // Print values from limelight
-    std::cout << "tx: " << limelight->GetNumber("tx", 0.0) << std::endl;
-    std::cout << "ty: " << limelight->GetNumber("ty", 0.0) << std::endl;
-    std::cout << "ta: " << limelight->GetNumber("ta", 0.0) << std::endl;
+    std::cout << "Left_1: " << eclipse.drivetrain.left_1.GetSelectedSensorPosition() << std::endl;
+    std::cout << "Left_2: " << eclipse.drivetrain.left_2.GetSelectedSensorPosition() << std::endl;
+    std::cout << "Right_1: " << eclipse.drivetrain.right_1.GetSelectedSensorPosition() << std::endl;
+    std::cout << "Right_2: " << eclipse.drivetrain.right_2.GetSelectedSensorPosition() << std::endl;
 }

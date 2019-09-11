@@ -14,7 +14,9 @@
   "wpilib.online": true,
   "files.associations": {
     "string": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "*.tcc": "cpp"
   },
   "C_Cpp.intelliSenseEngineFallback": "Disabled",
   "C_Cpp.errorSquiggles": "Disabled"

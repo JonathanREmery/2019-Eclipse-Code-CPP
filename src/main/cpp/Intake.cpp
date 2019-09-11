@@ -1,32 +1,26 @@
 #include "Intake.h"
 
-TalonSRX intake_motor(16);
-CANifier led(0);
 bool alreadyChanged = false;
 
 void Intake::RunOpenLoop() {
     if (eclipse.controller.getPOV() == eclipse.controls.down){
         // If down on the DPAD is pressed intake
-        intake_motor.Set(ControlMode::PercentOutput, mode ? 0.5f : -0.5f);
+        intake_motor.Set(ControlMode::PercentOutput, mode ? Constants::kIntakeCargoPower : Constants::kIntakeHatchPower);
     } else if (eclipse.controller.getPOV() == eclipse.controls.up){
         // If up on the DPAD is pressed outake
-        intake_motor.Set(ControlMode::PercentOutput, mode ? -0.5f : 0.5f);
+        intake_motor.Set(ControlMode::PercentOutput, mode ? -Constants::kIntakeCargoPower : -Constants::kIntakeHatchPower);
     } else {
         // If neither are pressed then just hold the cargo/hatch
-        intake_motor.Set(ControlMode::PercentOutput, mode ? 0.075f : -0.075f);
+        intake_motor.Set(ControlMode::PercentOutput, mode ? Constants::kIntakeCargoCurrentHold : Constants::kIntakeHatchCurrentHold);
     }
 
     if (ledEnabled){
         if (mode){
-            // If LED's are enabled and in ball mode turn LED's orange
-            led.SetLEDOutput(255, CANifier::LEDChannelA);
-            led.SetLEDOutput(173, CANifier::LEDChannelB);
-            led.SetLEDOutput(33, CANifier::LEDChannelC);
+            // If LED's are enabled and in cargo mode turn LED's orange
+            led.setRGB(255, 173, 33);
         } else {
-            // If LED's are enabled and in disc mode turn LED's purple
-            led.SetLEDOutput(113, CANifier::LEDChannelA);
-            led.SetLEDOutput(47, CANifier::LEDChannelB);
-            led.SetLEDOutput(198, CANifier::LEDChannelC);
+            // If LED's are enabled and in hatch mode turn LED's purple
+            led.setRGB(113, 47, 198);
         }
     }
 

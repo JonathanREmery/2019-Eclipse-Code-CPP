@@ -8,6 +8,14 @@ void Robot::RobotInit() {
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
   frc::CameraServer::GetInstance()->StartAutomaticCapture();
+  eclipse.drivetrain.right_1.SetInverted(true);
+  eclipse.drivetrain.right_2.SetInverted(true);
+  eclipse.pivot.pivot_2.SetInverted(true);
+
+  eclipse.drivetrain.left_1.ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Absolute);
+  eclipse.drivetrain.left_2.ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Absolute);
+  eclipse.drivetrain.right_1.ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Absolute);
+  eclipse.drivetrain.right_2.ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Absolute);
 }
 
 void Robot::RobotPeriodic() {}
